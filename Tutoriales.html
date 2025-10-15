@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutoriales</title>
+
+<style>
+
+  /* ----------- ESTILOS GENERALES ----------- */
+
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+/* ----------- BARRA SUPERIOR ----------- */
+ .logo-esquina {
+      position: right;
+      top: 10px;  
+      right: 10px; 
+      width: 80px; 
+    }
+
+    :root {
+      --black: #111;
+      --gray: #01005D;
+      --light-gray: #E6E6FF;
+      --radius: 20px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Alan Sans', sans-serif;
+    }
+    body {
+      background: #fff;
+      color: var(--black);
+      padding: 30px;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: left; 
+      align-items: center;
+      margin-bottom: 20px; /*Espacio de abajito del Header - Margin Bottom Header*/
+    }
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-left: 1%; /*Distancia entre la orilla de un objeto y otro, que se acopla a cambios de tamaño en la pagina - Logo de AE Y Texto*/
+    }
+
+     .subtitle{
+       font-size: 3.5rem;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 3%; /*Espacio Forzado a partir de la posicion de un elemento*/
+    }
+
+    /* ----------- MENÚ ----------- */
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  background: #0c0c5d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+nav a.active {
+  background: #a58cfb;
+  color: #000;
+}
+
+nav a:hover {
+  background: #5b4dd1;
+}
+.buttons{
+      position: absolute;
+      top: 30;
+      right: 0;
+      margin-right: 2%;
+    }
+.selectedbutton{
+      background-color: #9a99ff;
+    }
+
+    
+    
+
+/* ----------- SECCIÓN DE TARJETAS ----------- */
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 90%;
+  margin: 0 auto 4rem;
+}
+
+.info-card {
+  background: #e9e4ff;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  line-height: 1.4rem;
+}
+
+/* Efecto hover */
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 1024px) {
+  .info-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .info-container {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+
+/* ------ TUTORIAL CONTEINER ------*/
+
+.video-instrucciones-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.video-box-section,
+.instructions-section {
+  background: #EAE7FF;
+  padding: 30px;
+  border-radius: 30px;
+  flex: 1 1 450px;
+  box-sizing: border-box;
+}
+
+.video-title,
+.instructions-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.video-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+
+.media-placeholder {
+  background: #FFD900;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.media-content {
+  max-width: 120%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.video-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.video-button {
+  background: #0D007A;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.instructions-list {
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.instructions-list ul {
+  margin-top: 5px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.instructions-list code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+ 
+/* ----------- SIDEBAR ------- */
+
+ /* LAYOUT */
+    .layout {
+      display: flex;
+      gap: 40px;
+    }
+    .sidebar {
+      width: 40px;
+      background: var(--gray);
+      border-radius: 20px;
+      flex-shrink: 0;  
+    }
+
+</style>
+<body>
+
+<!-- ----------- HEADER ----------- -->
+<header>
+    <a href="index.html"> <img src="AE logo.jpg" alt="Logo Motion Lab" class="logo-esquina"></a>
+
+    <div class="logo">Motion<br>Lab</div>
+
+  
+
+
+    <nav class = "buttons">
+      <a href="Galería.html">Galería</a> <!-- En el # se inserta el link de la pagina a donde se va a direccionar-->
+      <a href="Tutoriales.html" class="selectedbutton">Tutoriales</a>
+      <a href="Tendencias.html">Tendencias</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <p class="subtitle">Pon en práctica tus ideas con estos pasos.</p>
+
+</head>
+
+
+ <!-- MAIN LAYOUT -->
+  <main class="layout">
+    
+
+    <aside class="sidebar"></aside>
+
+
+<div class="video-instrucciones-container">
+  <div class="video-box-section">
+    <h3 class="video-title">Efecto “reveal” en texto</h3>
+    <div class="video-box">
+      <!-- Inserta aquí tu imagen o video -->
+      <!-- Ejemplo imagen: -->
+      <!-- <img src="tu-imagen.jpg" alt="Video o imagen" class="media-content"> -->
+
+      <!-- Ejemplo video: -->
+      <video src="Reveal-tutorial.mp4" controls class="media-content"></video> 
+
+    
+    </div>
+    <div class="video-button-container">
+
+        <a href="https://www.youtube.com/watch?v=FQcp1tKf2qY"; target="_blank"> <!--En HTML SE USAN ESTAS PARA MARCAR ACOTACIONES--> <!--LINK DE REFERENCIA A UN VIDEO, TE SACA DE LA PÁGINA PRINCIPAL-->
+      <button class="video-button">Tutorial completo</button>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="instructions-section">
+    <h3 class="instructions-title">Instrucciones</h3>
+    <ol class="instructions-list">
+      <li>Selecciona tu capa de texto en la composición.</li>
+      <li>Muestra la propiedad "Posición":</li>
+      <li>Selecciona la capa y presiona la tecla P para revelar las propiedades de posición.</li>
+      <li>Abre el cuadro de expresiones:</li>
+      <li>Mantén presionada la tecla Alt (Windows) o Opción (Mac) y haz clic en el ícono del cronómetro junto a la palabra "Posición".</li>
+      <li>Escribe la expresión:</li>
+      <li>En el cuadro de código que aparece, escribe <code>wiggle()</code> seguido de dos valores separados por una coma y luego un paréntesis de cierre.</li>
+      <li>
+        Ajusta los valores:
+        <ul>
+          <li>El primer número es la frecuencia (cuántas veces por segundo ocurrirá el movimiento aleatorio).</li>
+          <li>El segundo número es la cantidad (el máximo de píxeles de movimiento en cualquier dirección).</li>
+          <li>Ejemplo: <code>wiggle(2, 30)</code></li>
+        </ul>
+      </li>
+      <li>Aplica y revisa:</li>
+      <li>Haz clic fuera del cuadro de expresiones para aplicarlo. El texto comenzará a temblar aleatoriamente, y puedes cambiar los números en cualquier momento para ajustar la velocidad y la amplitud del movimiento.</li>
+    </ol>
+  </div>
+</div>
+
+
+
+</body>
+</html>

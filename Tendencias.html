@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tendencias</title>
+
+<style>
+
+  /* ----------- ESTILOS GENERALES ----------- */
+
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+/* ----------- BARRA SUPERIOR ----------- */
+ .logo-esquina {
+      position: right;
+      top: 10px;  
+      right: 10px; 
+      width: 80px; 
+    }
+
+    :root {
+      --black: #111;
+      --gray: #01005D;
+      --light-gray: #E6E6FF;
+      --radius: 20px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Alan Sans', sans-serif;
+    }
+    body {
+      background: #fff;
+      color: var(--black);
+      padding: 30px;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: left; 
+      align-items: center;
+      margin-bottom: 20px; /*Espacio de abajito del Header - Margin Bottom Header*/
+    }
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-left: 1%; /*Distancia entre la orilla de un objeto y otro, que se acopla a cambios de tamaño en la pagina - Logo de AE Y Texto*/
+    }
+
+     .subtitle{
+       font-size: 3.5rem;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 3%; /*Espacio Forzado a partir de la posicion de un elemento*/
+    }
+
+    /* ----------- MENÚ ----------- */
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  background: #0c0c5d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+nav a.active {
+  background: #a58cfb;
+  color: #000;
+}
+
+nav a:hover {
+  background: #5b4dd1;
+}
+.buttons{
+      position: absolute;
+      top: 30;
+      right: 0;
+      margin-right: 2%;
+    }
+.selectedbutton{
+      background-color: #9a99ff;
+    }
+
+    
+    
+
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 1024px) {
+  .info-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .info-container {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+ 
+/* ----------- SIDEBAR ------- */
+
+ /* LAYOUT */
+    .layout {
+      display: flex;
+      gap: 40px;
+    }
+    .sidebar {
+      width: 40px;
+      background: var(--gray);
+      border-radius: 20px;
+      flex-shrink: 0;  
+    }
+
+    
+   /* ------------ TENDENCIAS CSS --------------- */
+   .video-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.video-card {
+  background: #EAE7FF;
+  border-radius: 30px;
+  padding: 20px;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.video-content {
+  background: #EAE7FF;
+  border-radius: 20px;
+  padding: 150px;
+  min-height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder {
+  background: #FFD900;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.media-video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.video-description {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+}
+
+.vid {
+border-radius: 8px;
+    
+}
+</style>
+<body>
+
+<!-- ----------- HEADER ----------- -->
+<header>
+    <a href="index.html"> <img src="AE logo.jpg" alt="Logo Motion Lab" class="logo-esquina"></a>
+
+    <div class="logo">Motion<br>Lab</div>
+
+  
+
+
+    <nav class = "buttons">
+      <a href="Galería.html">Galería</a> <!-- En el # se inserta el link de la pagina a donde se va a direccionar-->
+      <a href="Tutoriales.html">Tutoriales</a>
+      <a href="Tendencias.html" class="selectedbutton">Tendencias</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <p class="subtitle">Explota tu creatividad con estas tendencias.</p>
+
+</head>
+
+
+ <!-- MAIN LAYOUT -->
+  <main class="layout">
+    
+
+    <aside class="sidebar"></aside>
+
+   <div class="video-card-container">
+  <div class="video-card">
+    <div class="video-content">
+      <video class="vid" controls width="320" src="Reinvention.mp4" type="video/mp4" alt="Wiggle"></video>
+    </div>
+    <p class="video-description">Bloque de texto moldeable</p>
+  </div>
+
+  <div class="video-card">
+    <div class="video-content">    
+        <video class="vid" controls width="320" src="Sport.mp4" type="video/mp4" alt="Wiggle"></video>
+
+    </div>
+
+     
+    <p class="video-description">Deslizar palabras en secuencia</p>
+  </div>
+
+  <div class="video-card">
+    <div class="video-content">
+      <video class="vid" controls width="320" src="VisualEchoe.mp4" type="video/mp4" alt="Wiggle"></video>
+    </div>
+    <p class="video-description">Cambio de bloques visuales</p>
+  </div>
+
+  <div class="video-card">
+    <div class="video-content">
+      <video class="vid" controls width="320" src="YouForget.mp4" type="video/mp4" alt="Wiggle"></video>
+    </div>
+    <p class="video-description">Deformación dinámica de texto</p>
+  </div>
+</div>
+</section>
+
+</body>
+</html>
+ 

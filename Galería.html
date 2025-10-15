@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería</title>
+
+<style>
+/* ----------- ESTILOS GENERALES ----------- */
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+/* ----------- BARRA SUPERIOR ----------- */
+ .logo-esquina {
+      position: right;
+      top: 10px;  
+      right: 10px; 
+      width: 80px; 
+    }
+
+    :root {
+      --black: #111;
+      --gray: #01005D;
+      --light-gray: #E6E6FF;
+      --radius: 20px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Alan Sans', sans-serif;
+    }
+    body {
+      background: #fff;
+      color: var(--black);
+      padding: 30px;
+    }
+
+    /* HEADER */
+    
+    header {
+      display: flex;
+      justify-content: left; 
+      align-items: center;
+      margin-bottom: 20px; /*Espacio de abajito del Header - Margin Bottom Header*/
+    }
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-left: 1%; /*Distancia entre la orilla de un objeto y otro, que se acopla a cambios de tamaño en la pagina - Logo de AE Y Texto*/
+    }
+
+     .subtitle{
+       font-size: 3.5rem;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 3%; /*Espacio Forzado a partir de la posicion de un elemento*/
+    }
+
+
+
+/* ----------- MENÚ ----------- */
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  background: #0c0c5d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+nav a.active {
+  background: #a58cfb;
+  color: #000;
+}
+
+nav a:hover {
+  background: #5b4dd1;
+}
+
+/* ----------- TITULAR ----------- */
+.hero-text {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 1rem 0 2rem;
+}
+
+/* ----------- GALERÍA ----------- */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 90%;
+  margin: 0 auto 4rem;
+}
+
+.gallery-card {
+  background: #e9e4ff;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.gallery-card video {
+  object-fit: contain;
+  justify-content: space-around;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.caption {
+  text-align: center;
+  margin-top: .8rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+/* -------- HOVER ----------*/
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+} 
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+/*
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }*/
+}
+
+.vid{
+  border-radius: 20px;
+
+}
+
+.buttons{
+      position: absolute;
+      top: 30;
+      right: 0;
+      margin-right: 2%;
+    }
+
+    .selectedbutton{
+      background-color: #9a99ff;
+    }
+
+    /* ----------- SIDEBAR ------- */
+
+ /* LAYOUT */
+    .layout {
+      display: flex;
+      gap: 40px;
+    }
+    .sidebar {
+      width: 40px;
+      background: var(--gray);
+      border-radius: 20px;
+      flex-shrink: 0;  
+    }
+     
+</style>
+</head>
+
+<body>
+
+<!-- ----------- HEADER ----------- -->
+<header>
+   <a href="index.html"> <img src="AE logo.jpg" alt="Logo Motion Lab" class="logo-esquina"></a>
+
+    <div class="logo">Motion<br>Lab</div>
+
+  
+
+
+    <nav class = "buttons">
+      <a href="#" class="selectedbutton">Galería</a> <!-- En el # se inserta el link de la pagina a donde se va a direccionar-->
+      <a href="Tutoriales.html">Tutoriales</a>
+      <a href="Tendencias.html">Tendencias</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <p class="subtitle">Aprende animación digital de manera creativa y práctica.</p>
+
+   <!-- MAIN LAYOUT -->
+  <main class="layout">
+    
+
+    <aside class="sidebar"></aside>
+
+
+<!-- ----------- GALERÍA ----------- -->
+<section class="gallery-container">
+  <div class="gallery-card">
+    <video class="vid" controls width="320" src="Animotion.mp4" type="video/mp4" alt="Animotion"></video>
+    <p class="caption">Animación de texto</p>
+  </div>
+
+  <div class="gallery-card">
+    <video class="vid" controls width="320" src="Liquid.mp4" type="video/mp4" alt="Liquid"></video>
+    <p class="caption">Animación de vectores</p>
+  </div>
+
+  <div class="gallery-card">
+    <video class="vid" controls width="320" src="Reveal.mp4" type="video/mp4" alt="Reveal-tutorial"></video>
+    <p class="caption">Animación de imágenes</p>
+  </div>
+
+  <div class="gallery-card">
+    <video class="vid" controls width="320" src="Wiggle.mp4" type="video/mp4" alt="Wiggle"></video>
+    <p class="caption">Animación de bloques</p>
+  </div>
+</section>
+
+</body>
+</html>
