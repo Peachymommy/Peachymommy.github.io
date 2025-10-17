@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo 2 - Diseño</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            /* Establece la imagen subida como fondo */
+            background-image: url('fondo.jpg');
+            /* Asegura que la imagen cubra todo el fondo */
+            background-size: cover;
+            /* Fija la imagen para que no se mueva con el scroll */
+            background-attachment: fixed;
+            /* Centra la imagen en el fondo */
+            background-position: center;
+            /* Quita el margen predeterminado del body */
+            margin: 0;
+            /* Establece una altura mínima para que el fondo sea visible */
+            min-height: 100vh;
+            /* Usa Flexbox para centrar o posicionar elementos, aunque aquí solo se usará para el contenedor principal */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Opcional: Centra el contenido si agregas más elementos */
+            justify-content: center;
+        }
+
+        .contenedor-botones {
+            /* Posiciona los botones de forma relativa al body */
+            position: absolute;
+            /* Centrado horizontal (opcional, ajusta si es necesario) */
+            /* left: 50%; */
+            /* transform: translateX(-50%); */
+            /* Ajusta la posición vertical para que se parezca al ejemplo */
+            bottom: 5vh; /* 5% de la altura de la ventana desde abajo */
+            width: 90%; /* Ancho para contener los botones */
+            max-width: 1200px; /* Limita el ancho máximo si es necesario */
+            display: flex; /* Usa Flexbox para distribuir los botones */
+            justify-content: space-between; /* Espacia los botones a los extremos */
+            padding: 0 5%; /* Añade un poco de padding a los lados */
+        }
+
+        .boton {
+            /* Estilos generales para los botones */
+            padding: 10px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none; /* Quita el subrayado del enlace */
+            color: black; /* Color del texto */
+            border: 3px solid black; /* Borde visible como en la imagen */
+            background-color: white; /* Fondo blanco para el "botón" */
+            border-radius: 5px;
+            text-align: center;
+            width: 150px; /* Ancho fijo para los botones */
+            cursor: pointer; /* Indica que es un elemento interactivo */
+            /* Sombra sutil para darle un poco de profundidad (opcional) */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s; /* Transición suave al pasar el ratón */
+        }
+
+        .boton:hover {
+            /* Efecto al pasar el ratón */
+            background-color: #f0f0f0;
+        }
+
+        /* Estilos específicos para posicionar los botones donde están los óvalos de texto en la imagen */
+        #boton-color {
+            /* Posición del primer botón, ajustado al lado izquierdo de la imagen */
+            margin-left: 10%; /* Empuja desde la izquierda del contenedor */
+            position: relative; /* Permite un ajuste de posición local */
+            top: 20px; /* Ajuste para subirlo un poco, si es necesario */
+        }
+
+        #boton-anatomia {
+            /* Posición del segundo botón, ajustado al lado derecho de la imagen */
+            margin-right: 10%; /* Empuja desde la derecha del contenedor */
+            position: relative; /* Permite un ajuste de posición local */
+            top: 20px; /* Ajuste para subirlo un poco, si es necesario */
+        }
+
+        /* MEDIA QUERY para pantallas más pequeñas si es necesario */
+        @media (max-width: 600px) {
+            .contenedor-botones {
+                flex-direction: column; /* Apila los botones verticalmente */
+                align-items: center;
+                bottom: 2vh;
+            }
+            .boton {
+                margin: 10px 0 !important; /* Añade espacio entre botones apilados */
+                width: 80%;
+                max-width: 200px;
+            }
+            #boton-color, #boton-anatomia {
+                margin: 10px auto !important;
+                top: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-botones">
+        <a id="boton-color" class="boton" href="color.html">COLOR</a>
+
+        <a id="boton-anatomia" class="boton" href="Segundoparcial.html">ANATOMÍA</a>
+    </div>
+
+</body>
+</html>
